@@ -4,7 +4,7 @@
 ![my promises page](image-1.png)
 ![promise details](image-2.png)
 
-A web app to help keep yourself and friends accountable! A mobile-first app made for the final group project at Dev Academy. 
+A web app to help keep yourself and friends accountable! A mobile-first app made for the 7-day final group project at Dev Academy.
 
 #### **From the command line**
 
