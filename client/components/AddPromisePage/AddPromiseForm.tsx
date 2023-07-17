@@ -9,6 +9,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 interface Props {
   promise?: PledgeDraftSchemaFrontEnd
   handleSubmit: (promise: Pledge | PledgeDraftSchemaFrontEnd) => void
+  
 }
 
 function AddPromiseForm(props: Props) {
