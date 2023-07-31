@@ -37,4 +37,4 @@ npm run dev # to start the dev server
 
 ### Resources
 
-[Figma Wireframe](https://www.figma.com/file/sNIyAtAcP5v3chOp3jlO7s/Pinky-Promise-Wireframe?type=design&node-id=0%3A1&mode=design&t=PexV5VXsLAXhLeMj-1)
+[Figma Wireframe](https://www.figma.com/file/Tf8TbiSY3RvK8lYr5XvAWc/Pinky-Promise-Wireframe?type=design&node-id=0%3A1&mode=design&t=10tXYSYRwacy3zve-1)
