@@ -20,52 +20,44 @@ function Nav() {
   }
 
   return (
-    <div className="app">
+    <div>
       <div className="fixed bottom-0 left-0 w-full h-20">
-        <div className="grid h-full max-w-lg grid-cols-3 mx-auto font-medium px-10">
-          <div className="">
-            <button
-              onClick={() => goTo('/my-promises')}
-              className="fa-solid fa-house fa-lg w-16 h-16 bg bg-pink hover:bg-darkPink mx-auto rounded-full flex items-center justify-center "
+        <div className="flex items-center justify-evenly mx-auto font-medium px-10 lg:flex lg:justify-center lg:space-x-20">
+          <button
+            onClick={() => goTo('/my-promises')}
+            className="fa-solid fa-house fa-lg w-16 h-16 bg-pink hover:bg-darkPink rounded-full"
+            style={{ color: '#464fa3' }}
+          ></button>
+          <button
+            onClick={() => goTo('/add-promise')}
+            className="fa-thin fa-plus fa-2xl w-16 h-16 bg-pink hover:bg-darkPink rounded-full"
+            style={{ color: '#464fa3' }}
+          ></button>
+          <button
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            className="w-16 h-16 bg-pink hover:bg-darkPink rounded-full text-white focus:outline-none"
+          >
+            <i
+              className="fa-solid fa-bars fa-lg ml-0.5"
               style={{ color: '#464fa3' }}
-            ></button>
-          </div>
+            ></i>
+          </button>
 
-          <div className="">
-            <button
-              onClick={() => goTo('/add-promise')}
-              className="fa-thin fa-plus fa-2xl mb-2 w-16 h-16 bg bg-pink hover:bg-darkPink rounded-full mx-auto flex items-center justify-center"
-              style={{ color: '#464fa3' }}
-            ></button>
-          </div>
-
-          <div className="">
-            <button
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="w-16 h-16 bg bg-pink hover:bg-darkPink rounded-full mx-auto flex items-center justify-center text-white focus:outline-none"
-            >
-              <i
-                className="fa-solid fa-bars fa-lg ml-0.5"
-                style={{ color: '#464fa3' }}
-              ></i>
-            </button>
-
-            {isDropdownOpen && (
-              <div className="fixed right-0  z-10 bottom-24 w-full rounded-lg bg-purple">
-                <ul className="text-xl flex flex-col items-center">
-                  <li className="w-full flex items-center justify-center rounded-lg px-4 py-6 text-slate-50  hover:bg-darkPink">
-                    <a href="/my-profile">Profile</a>
-                  </li>
-                  <li className=" w-full flex items-center justify-center rounded-lg px-4 py-6 text-slate-50  hover:bg-darkPink">
-                    <a href="/my-friends">Friends</a>
-                  </li>
-                  <li className=" w-full flex items-center justify-center rounded-lg px-4 py-6 text-slate-50  hover:bg-darkPink ">
-                    <button onClick={handleLogout}>Log out</button>
-                  </li>
-                </ul>
-              </div>
-            )}
-          </div>
+          {isDropdownOpen && (
+            <div className="fixed right-0  z-10 bottom-24 w-full rounded-lg bg-purple">
+              <ul className="text-xl flex flex-col items-center">
+                <li className="w-full flex items-center justify-center rounded-lg px-4 py-6 text-slate-50  hover:bg-darkPink">
+                  <a href="/my-profile">Profile</a>
+                </li>
+                <li className="w-full flex items-center justify-center rounded-lg px-4 py-6 text-slate-50  hover:bg-darkPink">
+                  <a href="/my-friends">Friends</a>
+                </li>
+                <li className="w-full flex items-center justify-center rounded-lg px-4 py-6 text-slate-50  hover:bg-darkPink ">
+                  <button onClick={handleLogout}>Log out</button>
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </div>
