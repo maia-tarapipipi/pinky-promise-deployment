@@ -44,15 +44,15 @@ function Nav() {
           </button>
 
           {isDropdownOpen && (
-            <div className="fixed right-0  z-10 bottom-24 w-full rounded-lg bg-purple">
-              <ul className="text-xl flex flex-col items-center">
-                <li className="w-full flex items-center justify-center rounded-lg px-4 py-6 text-slate-50  hover:bg-darkPink">
+            <div className="w-full fixed right-0 z-10 bottom-24 rounded-lg bg-purple">
+              <ul className="text-xl text-center">
+                <li className="rounded-lg px-4 py-6 text-slate-50  hover:bg-darkPink">
                   <a href="/my-profile">Profile</a>
                 </li>
-                <li className="w-full flex items-center justify-center rounded-lg px-4 py-6 text-slate-50  hover:bg-darkPink">
+                <li className="rounded-lg px-4 py-6 text-slate-50  hover:bg-darkPink">
                   <a href="/my-friends">Friends</a>
                 </li>
-                <li className="w-full flex items-center justify-center rounded-lg px-4 py-6 text-slate-50  hover:bg-darkPink ">
+                <li className="rounded-lg px-4 py-6 text-slate-50  hover:bg-darkPink ">
                   <button onClick={handleLogout}>Log out</button>
                 </li>
               </ul>
