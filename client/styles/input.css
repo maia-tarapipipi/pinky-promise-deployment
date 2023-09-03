@@ -17,7 +17,7 @@
 }
 
 space-background-bg-class {
-  background-image: url(/image/background.png);
+  background-image: url(/image/background.webp);
 }
 
 @layer utilities {

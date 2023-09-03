@@ -17,7 +17,7 @@ module.exports = {
         body: 'PTSans-Regular',
       },
       backgroundImage: {
-        space: 'url(/image/background3.png)',
+        space: 'url(/image/background3.webp)',
       },
       backgroundPosition: {
         rightbackgroundImage: 'right 3000px',

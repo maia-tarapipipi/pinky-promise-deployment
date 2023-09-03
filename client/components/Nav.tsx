@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import '@fortawesome/fontawesome-free/css/all.css'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
-config.autoAddCss = false
 import { useAuth0 } from '@auth0/auth0-react'
+config.autoAddCss = false
 
 function Nav() {
   const navigate = useNavigate()
@@ -27,15 +27,18 @@ function Nav() {
             onClick={() => goTo('/my-promises')}
             className="fa-solid fa-house fa-lg w-16 h-16 bg-pink hover:bg-darkPink rounded-full"
             style={{ color: '#464fa3' }}
+            aria-label="home"
           ></button>
           <button
             onClick={() => goTo('/add-promise')}
             className="fa-thin fa-plus fa-2xl w-16 h-16 bg-pink hover:bg-darkPink rounded-full"
             style={{ color: '#464fa3' }}
+            aria-label="add promise"
           ></button>
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             className="w-16 h-16 bg-pink hover:bg-darkPink rounded-full text-white focus:outline-none"
+            aria-label="dropdown"
           >
             <i
               className="fa-solid fa-bars fa-lg ml-0.5"
@@ -45,17 +48,21 @@ function Nav() {
 
           {isDropdownOpen && (
             <div className="w-full fixed right-0 z-10 bottom-24 rounded-lg bg-purple">
-              <ul className="text-xl text-center">
-                <li className="rounded-lg px-4 py-6 text-slate-50  hover:bg-darkPink">
-                  <a href="/my-profile">Profile</a>
-                </li>
-                <li className="rounded-lg px-4 py-6 text-slate-50  hover:bg-darkPink">
-                  <a href="/my-friends">Friends</a>
-                </li>
-                <li className="rounded-lg px-4 py-6 text-slate-50  hover:bg-darkPink ">
+              <div className="text-xl text-center">
+                <div className="rounded-lg px-4 py-6 text-slate-50  hover:bg-darkPink">
+                  <a href="/my-profile" aria-label="Profile">
+                    Profile
+                  </a>
+                </div>
+                <div className="rounded-lg px-4 py-6 text-slate-50  hover:bg-darkPink">
+                  <a href="/my-friends" aria-label="Friends">
+                    Friends
+                  </a>
+                </div>
+                <div className="rounded-lg px-4 py-6 text-slate-50  hover:bg-darkPink ">
                   <button onClick={handleLogout}>Log out</button>
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
           )}
         </div>

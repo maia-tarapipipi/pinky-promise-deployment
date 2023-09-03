@@ -2,7 +2,7 @@ function Loading() {
   return (
     <div
       className="relative w-screen min-h-screen bg-fixed bg-center bg-cover opacity-80"
-      style={{ backgroundImage: 'url(/image/background3.png)' }}
+      style={{ backgroundImage: 'url(/image/background3.webp)' }}
     >
       <div className="absolute -translate-x-1/2 -translate-y-1/2 top-2/4 left-1/2">
         <svg

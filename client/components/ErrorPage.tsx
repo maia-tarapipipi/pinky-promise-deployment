@@ -6,7 +6,7 @@ function ErrorPage() {
     <>
       <div
         className="w-screen min-h-screen bg-fixed bg-center bg-cover "
-        style={{ backgroundImage: 'url(/image/background3.png)' }}
+        style={{ backgroundImage: 'url(/image/background3.webp)' }}
       >
         <Header />
         <div className="text-fuchsia-500 flex min-h-screen items-center justify-center flex-col gap-10">
