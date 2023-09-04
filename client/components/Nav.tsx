@@ -1,12 +1,8 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import '@fortawesome/fontawesome-free/css/all.css'
-import { config } from '@fortawesome/fontawesome-svg-core'
-import '@fortawesome/fontawesome-svg-core/styles.css'
 import { useAuth0 } from '@auth0/auth0-react'
 import { FaPlus } from 'react-icons/fa'
 import { FaHouse, FaBars } from 'react-icons/fa6'
-config.autoAddCss = false
 
 function Nav() {
   const navigate = useNavigate()
@@ -28,25 +24,23 @@ function Nav() {
           <button
             onClick={() => goTo('/my-promises')}
             className="flex justify-center items-center w-16 h-16 bg-pink hover:bg-darkPink rounded-full"
-            style={{ color: '#464fa3' }}
             aria-label="home"
           >
-            <FaHouse size={25} />
+            <FaHouse size={25} color="#464fa3" />
           </button>
           <button
             onClick={() => goTo('/add-promise')}
             className="flex justify-center items-center w-16 h-16 bg-pink hover:bg-darkPink rounded-full"
-            style={{ color: '#464fa3' }}
             aria-label="add promise"
           >
-            <FaPlus size={25} />
+            <FaPlus size={25} color="#464fa3" />
           </button>
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             className="flex justify-center items-center w-16 h-16 bg-pink hover:bg-darkPink rounded-full"
             aria-label="dropdown"
           >
-            <FaBars size={25} style={{ color: '#464fa3' }} />
+            <FaBars size={25} color="#464fa3" />
           </button>
 
           {isDropdownOpen && (
