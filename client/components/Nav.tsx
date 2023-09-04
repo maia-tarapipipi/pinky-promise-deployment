@@ -4,6 +4,8 @@ import '@fortawesome/fontawesome-free/css/all.css'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { useAuth0 } from '@auth0/auth0-react'
+import { FaPlus } from 'react-icons/fa'
+import { FaHouse, FaBars } from 'react-icons/fa6'
 config.autoAddCss = false
 
 function Nav() {
@@ -25,25 +27,26 @@ function Nav() {
         <div className="flex items-center justify-evenly mx-auto font-medium px-10 lg:flex lg:justify-center lg:space-x-20">
           <button
             onClick={() => goTo('/my-promises')}
-            className="fa-solid fa-house fa-lg w-16 h-16 bg-pink hover:bg-darkPink rounded-full"
+            className="flex justify-center items-center w-16 h-16 bg-pink hover:bg-darkPink rounded-full"
             style={{ color: '#464fa3' }}
             aria-label="home"
-          ></button>
+          >
+            <FaHouse size={25} />
+          </button>
           <button
             onClick={() => goTo('/add-promise')}
-            className="fa-thin fa-plus fa-2xl w-16 h-16 bg-pink hover:bg-darkPink rounded-full"
+            className="flex justify-center items-center w-16 h-16 bg-pink hover:bg-darkPink rounded-full"
             style={{ color: '#464fa3' }}
             aria-label="add promise"
-          ></button>
+          >
+            <FaPlus size={25} />
+          </button>
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="w-16 h-16 bg-pink hover:bg-darkPink rounded-full text-white focus:outline-none"
+            className="flex justify-center items-center w-16 h-16 bg-pink hover:bg-darkPink rounded-full"
             aria-label="dropdown"
           >
-            <i
-              className="fa-solid fa-bars fa-lg ml-0.5"
-              style={{ color: '#464fa3' }}
-            ></i>
+            <FaBars size={25} style={{ color: '#464fa3' }} />
           </button>
 
           {isDropdownOpen && (
