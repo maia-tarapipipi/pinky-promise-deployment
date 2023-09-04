@@ -12,23 +12,19 @@ interface Props {
 }
 
 function Promise(props: Props) {
-  const { promiseName, promiseDescription, friendName, dateCreated } = props.promise
-    
-  return (
-    <div className="font-sans flex-grow p-4">
-      <h1 className="flex items-center justify-between text-slate-50 p-2 text-2xl">
-        <span className="font-bold">{promiseName}</span>
+  const { promiseName, promiseDescription, friendName, dateCreated } =
+    props.promise
 
-        <span className="text-base font-bold text-fuchsia-200">{dateCreated}</span>
+  return (
+    <div className=" font-bold p-4">
+      <h1 className="flex items-center justify-between text-slate-50 p-2 text-2xl">
+        <span>{promiseName}</span>
+        <span className="text-base text-fuchsia-200">{dateCreated}</span>
       </h1>
 
-      <div className="p-2 font-bold text-xl text-fuchsia-200">
-        {friendName}
-      </div>
+      <p className="p-2 text-xl text-fuchsia-200">{friendName}</p>
 
-      <p className="text-slate-50 text-base p-2 font-bold ">
-        {promiseDescription}
-      </p>
+      <p className="text-slate-50 p-2 ">{promiseDescription}</p>
 
       <div className="flex justify-center items-center pt-5">
         <button
@@ -40,7 +36,7 @@ function Promise(props: Props) {
             alt="Promise Broken!"
             className="flex items-center"
           />
-          <span className="text-slate-50 font-bold text-base">
+          <span className="text-slate-50 ">
             Promise <br /> Broken!
           </span>
         </button>
@@ -50,7 +46,7 @@ function Promise(props: Props) {
           className="p-2"
         >
           <img src="/promiseKept.svg" alt="Promise Kept!" />
-          <span className="text-slate-50 font-bold text-base ">
+          <span className="text-slate-50  ">
             Promise <br /> Kept!
           </span>
         </button>
@@ -58,12 +54,10 @@ function Promise(props: Props) {
 
       <div className="flex justify-center mx-2 pt-4">
         <FacebookShareButton
-          // TO DO: update when app is deployed with deployment site
-          url={`kahikatea-2023-mikhail.au.auth0.com`}
+          url={`https://pinky-promise.onrender.com`}
           title={`Check out my promise with, ${friendName}!`}
           hashtag="#PinkyPromise"
           name="Facebook Share Button"
-          
         >
           <FacebookIcon className="mx-2" size={40} borderRadius={50} />
         </FacebookShareButton>
@@ -72,7 +66,6 @@ function Promise(props: Props) {
           url={`${window.location.href}/my-promises/`}
           hashtags={['PinkyPromise']}
           name="Twitter Share Button"
-          
         >
           <TwitterIcon className="mx-2" size={40} borderRadius={50} />
         </TwitterShareButton>

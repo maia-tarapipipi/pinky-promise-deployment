@@ -21,14 +21,14 @@ function AllPromisesItem(props: Props) {
         {promises.map((promise) => {
           return (
             <div key={promise.promiseId} className="flex font-bold">
-              <div className="w-3/4 p-2 text-slate-50 truncate bg-slate-950 bg-opacity-50  rounded-l-lg  text-lg">
+              <div className="max-md:w-[80%] md:w-[90%] p-2 text-slate-50 truncate bg-slate-950 bg-opacity-50  rounded-l-lg  text-lg">
                 <div className="truncate overflow-hidden whitespace-nowrap">
                   {promise.promiseName}
                   <br />
                   <span className="text-fuchsia-200">{promise.friendName}</span>
                 </div>
               </div>
-              <div className="flex items-center justify-center w-1/4 text-slate-50 bg-slate-950 bg-opacity-50 rounded-r-lg">
+              <div className="flex items-center justify-center max-md:w-[20%] md:w-[10%] text-slate-50 bg-slate-950 bg-opacity-50 rounded-r-lg">
                 <button
                   onClick={() => redirectToDetailsPage(promise.promiseId)}
                   aria-label="promise detail page"

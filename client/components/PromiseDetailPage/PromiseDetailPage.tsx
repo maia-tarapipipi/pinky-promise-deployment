@@ -71,19 +71,17 @@ function PromiseDetailPage() {
   }
 
   return (
-    <div className="flex mx-4">
-      <div className="flex flex-grow justify-center bg-slate-950 bg-opacity-50 rounded-lg h-102">
-        {!promiseQuery.isLoading && promiseQuery.data && (
-          <div className="relative">
-            <Promise
-              promise={promiseQuery.data}
-              handleResolvePromise={handleResolvePromise}
-            />
-            <PromiseBroken broken={broken} />
-            <PromiseKept kept={kept} />
-          </div>
-        )}
-      </div>
+    <div className="flex justify-center  bg-slate-950 bg-opacity-50 rounded-lg h-102">
+      {!promiseQuery.isLoading && promiseQuery.data && (
+        <div className="relative">
+          <Promise
+            promise={promiseQuery.data}
+            handleResolvePromise={handleResolvePromise}
+          />
+          <PromiseBroken broken={broken} />
+          <PromiseKept kept={kept} />
+        </div>
+      )}
     </div>
   )
 }
