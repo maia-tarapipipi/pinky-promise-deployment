@@ -27,9 +27,6 @@ function PromiseDetailPage() {
       promiseUpdate: PledgeStatusUpdate
       token: string
     }) => resolvePromise(promiseUpdate, token),
-    onSuccess: () => {
-      console.log('well done')
-    },
   })
 
   function handleBroken() {
@@ -48,7 +45,6 @@ function PromiseDetailPage() {
       transition: { duration: 0.5 },
     })
     setTimeout(() => {
-      // CHANGE THIS BACK TO my-promises
       navigate(`/my-promises`)
     }, 800)
   }
@@ -75,7 +71,7 @@ function PromiseDetailPage() {
   }
 
   return (
-    <div className="flex mt-20 mx-4">
+    <div className="flex mx-4">
       <div className="flex flex-grow justify-center bg-slate-950 bg-opacity-50 rounded-lg h-102">
         {!promiseQuery.isLoading && promiseQuery.data && (
           <div className="relative">

@@ -19,8 +19,12 @@ function App() {
         {isAuthenticated ? (
           <>
             <Header />
-            <Outlet />
-            <Nav />
+            <div className="mt-20 mb-30 p-4 font-sans">
+              <Outlet />
+            </div>
+            <div className="font-sans">
+              <Nav />
+            </div>
           </>
         ) : (
           <>
